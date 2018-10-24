@@ -1,9 +1,6 @@
 package org.superbiz.moviefun.moviesapi;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.core.ParameterizedTypeReference;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestOperations;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -13,11 +10,10 @@ import static org.springframework.http.HttpMethod.GET;
 
 public class MoviesClient {
 
-    private String moviesUrl;
-    private RestOperations restOperations;
-
     private static ParameterizedTypeReference<List<MovieInfo>> movieListType = new ParameterizedTypeReference<List<MovieInfo>>() {
     };
+    private String moviesUrl;
+    private RestOperations restOperations;
 
     public MoviesClient(String moviesUrl, RestOperations restOperations) {
         this.moviesUrl = moviesUrl;

@@ -42,4 +42,6 @@ public class AlbumServiceApplication {
 
         return new S3Store(s3Client, s3BucketName);
     }
+
+
 }
